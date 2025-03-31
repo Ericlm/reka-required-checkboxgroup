@@ -16,7 +16,7 @@ const fruits = ref<string[]>([])
     class="bg-purple-50"
     @submit.prevent="console.log('submit', toRaw(fruits))"
    >
-    <CheckboxGroupRoot v-model="fruits" class="flex gap-x-3">
+    <CheckboxGroupRoot v-model="fruits" class="flex gap-x-3" required>
       <CheckboxRoot 
         v-for="option in options" 
         :key="option"
